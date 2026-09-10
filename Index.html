@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container for the cow blizzard -->
+    <div id="cow-container"></div>
+
+    <!-- MAIN PAGE: Invitation & Declaration -->
+    <div id="page-invite" class="card-container active-page">
+        <div class="heart-halo"></div>
+        <p class="header-tag">— WITH THE DEEPEST ADMIRATION —</p>
+        <h1 class="recipient-name">Pretty Mthombeni,</h1>
+        
+        <div class="declaration-box">
+            <p>From the moment we began speaking, you brought something incredibly bright into my life. Writing this is just a small way to show you how much your presence truly means to me. 🐄✨</p>
+            <p>I want to make memories that last, and there is something in this moment worth seizing. 💖</p>
+        </div>
+        
+        <p class="message-text">
+            I am genuinely, wonderfully happy that our paths are finally crossing. There is something about you that makes the world feel a little more beautiful, and I would be honoured, truly honoured, if you would allow me the privilege of your company.
+        </p>
+        
+        <p class="question">Will you say yes?</p>
+
+        <div class="button-group">
+            <button class="lily-btn btn-yes" onclick="showPage('page-restaurants')">
+                <span class="btn-text">YES</span>
+            </button>
+            <button class="lily-btn btn-no" id="no-button" onmouseover="moveButton()">
+                <span class="btn-text">MAYBE NOT...</span>
+            </button>
+        </div>
+
+        <!-- Countdown styled over stylized milk box containers -->
+        <p class="timer-tag">— OUR DATE IN —</p>
+        <div class="countdown-container">
+            <div class="milk-box"><span id="days">00</span><label>DAYS</label></div>
+            <div class="milk-box"><span id="hours">00</span><label>HOURS</label></div>
+            <div class="milk-box"><span id="mins">00</span><label>MINS</label></div>
+        </div>
+    </div>
+
+    <!-- SUB-PAGE: Romantic Heart Restaurant Options -->
+    <div id="page-restaurants" class="card-container">
+        <p class="header-tag">— OUR CAFÉ OPTIONS —</p>
+        <h2 class="sub-title">Where should we go? 🐮💞</h2>
+        <p class="message-text">Pick your favorite spot for our afternoon together:</p>
+
+        <div class="cafe-flex">
+            <div class="cafe-heart-card" onclick="selectCafe('BemBom Wonderboom')">
+                <div class="cafe-content">
+                    <span class="cafe-icon">☕</span>
+                    <h3>BemBom Wonderboom</h3>
+                    <p>Portuguese café · Pastries & coffee</p>
+                </div>
+            </div>
+            <div class="cafe-heart-card" onclick="selectCafe('The Wild Café')">
+                <div class="cafe-content">
+                    <span class="cafe-icon">🌿</span>
+                    <h3>The Wild Café</h3>
+                    <p>Fusion café · SA flavours</p>
+                </div>
+            </div>
+            <div class="cafe-heart-card" onclick="selectCafe('West Café')">
+                <div class="cafe-content">
+                    <span class="cafe-icon">🎵</span>
+                    <h3>West Café</h3>
+                    <p>Artisan café · Pizza & music</p>
+                </div>
+            </div>
+            <div class="cafe-heart-card" onclick="selectCafe('Coffee Junction Café')">
+                <div class="cafe-content">
+                    <span class="cafe-icon">☕</span>
+                    <h3>Coffee Junction Café</h3>
+                    <p>Cozy café · Great breakfast</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUB-PAGE: Success Screen -->
+    <div id="page-success" class="card-container">
+        <p class="header-tag">— IT'S A DATE —</p>
+        <span class="big-emoji">🐄💞🐮</span>
+        <h2 class="sub-title">You made your choice!</h2>
+        <div class="confirmation-box">
+            <p><strong>Place:</strong> <span id="chosen-cafe">None</span></p>
+            <p>I cannot wait to see you come as your beautiful self! ✨</p>
+        </div>
+        <button class="lily-btn btn-yes" style="height:120px; width:150px; margin: 20px auto 0 auto;" onclick="showPage('page-invite')">
+            <span class="btn-text">BACK</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
